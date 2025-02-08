@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2 class="text-center mt-4">Artworks Gallery</h2>
+    <div class="row">
+        {% for artwork in artworks %}
+        <div class="col-12 d-flex align-items-center border-bottom py-3">
+            <img src="{{ artwork.file_path }}" alt="Artwork Image" class="img-thumbnail" style="width: 150px; height: auto;">
+            <div class="ms-3">
+                <h5>{{ artwork.artist_name }}</h5>
+                <p>{{ artwork.description }}</p>
+                <small class="text-muted">{{ artwork.file_path }}</small>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

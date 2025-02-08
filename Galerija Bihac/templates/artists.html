@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Flash Messages -->
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div>
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+<!-- Artists Table -->
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Artist Name</th>
+            <th>Date of Birth</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr>
+            <td>{{ record[0] }}</td> <!-- Artist ID -->
+            <td>{{ record[1] }}</td> <!-- Artist Name -->
+            <td>{{ record[2] if record[2] else "Not available" }}</td> <!-- Date of Birth -->
+            <td>{{ record[3] if record[3] else "No description" }}</td> <!-- Description -->
+            <td>
+                <a href="{{ url_for('update_biography', artist_id=record[0]) }}" class="btn btn-primary">Update Biography</a>
+                <a href="{{ url_for('delete_biography', artist_id=record[0]) }}" class="btn btn-danger">Delete Biography</a>
+                <a href="{{ url_for('delete_artist', artist_id=record[0]) }}" class="btn btn-danger">Delete</a>
+
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{{ url_for('add_artist') }}" class="btn btn-primary">Add Artist</a>
+
+{% endblock %}

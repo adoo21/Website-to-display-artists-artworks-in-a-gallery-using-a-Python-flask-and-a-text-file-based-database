@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Artist Biographies</h1>
+<table>
+    <tr>
+        <th>Artist ID</th>
+        <th>Date of Birth</th>
+        <th>Description</th>
+        <th>Actions</th>
+    </tr>
+    {% for record in records %}
+    <tr>
+        {% set data = record.strip().split(',') %}
+        <td>{{ data[0] }}</td>
+        <td>{{ data[1] }}</td>
+        <td>{{ data[2] }}</td>
+        <td><a href="{{ url_for('delete_biography', artist_id=data[0]) }}">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

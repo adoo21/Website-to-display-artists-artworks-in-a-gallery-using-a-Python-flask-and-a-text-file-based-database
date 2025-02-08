@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Update Artist</h1>
+    <form method="POST">
+        <label for="new_name">New Name:</label>
+        <input type="text" id="new_name" name="new_name" required><br><br>
+        <input type="submit" value="Update Artist">
+    </form>
+{% endblock %}

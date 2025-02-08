@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Update Biography</h2>
+<form method="POST">
+    <div>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" value="{{ biography[1] if biography else '' }}">
+    </div>
+    <div>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description">{{ biography[2] if biography else '' }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+{% endblock %}
+

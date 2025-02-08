@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Descriptions</h1>
+    <ul>
+        {% for record in records %}
+            <li>{{ record }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

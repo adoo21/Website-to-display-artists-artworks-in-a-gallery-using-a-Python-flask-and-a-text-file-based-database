@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Connect Artist with Artwork</h2>
+
+<form action="{{ url_for('art_connection') }}" method="post">
+    <label for="artist_id">Select Artist:</label>
+    <select name="artist_id" required>
+        {% for artist in artists %}
+        <option value="{{ artist[0] }}">{{ artist[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="artwork_id">Select Artwork:</label>
+    <select name="artwork_id" required>
+        {% for artwork in artworks %}
+        <option value="{{ artwork[0] }}">{{ artwork[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Connect</button>
+</form>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="flash {{ category }}">{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+{% endblock %}

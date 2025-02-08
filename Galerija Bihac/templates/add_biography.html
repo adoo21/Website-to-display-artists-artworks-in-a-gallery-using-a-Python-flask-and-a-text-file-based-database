@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Add Biography for Artist ID: {{ artist_id }}</h1>
+<form method="POST">
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <label for="description">Biography:</label><br>
+    <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+
+    <button type="submit">Save Biography</button>
+</form>
+{% endblock %}

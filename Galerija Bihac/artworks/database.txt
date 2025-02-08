@@ -1,0 +1,11 @@
+id,data
+1,static/uploads/Screenshot_2025-01-27_at_11-03-57_Instagram.png
+2,static/uploads/Screenshot_2025-01-27_at_11-04-04_Instagram.png
+3,static/uploads/Screenshot_2025-01-27_at_11-00-32_Instagram.png
+4,static/uploads/uzgon-dupanovic.png
+5,static/uploads/Screenshot_2025-01-27_at_11-03-11_Instagram.png
+6,static/uploads/Screenshot_2025-01-27_at_11-03-37_Instagram.png
+7,static/uploads/Screenshot_2025-01-27_at_11-00-11_Instagram.png
+8,static/uploads/Screenshot_2025-01-27_at_11-01-51_Instagram.png
+9,static/uploads/Screenshot_2025-01-27_at_11-01-55_Instagram.png
+10,static/uploads/Screenshot_2025-01-27_at_11-02-01_Instagram.png

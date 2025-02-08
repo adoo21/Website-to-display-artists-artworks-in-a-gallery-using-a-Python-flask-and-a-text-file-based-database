@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Gallery</h1>
+
+    <div class="gallery">
+        {% for artwork_id, file_path in artworks %}
+        <img src="{{ file_path }}" alt="Artwork {{ artwork_id }}" width="300">
+{% endfor %}
+
+    
+    </div>
+{% endblock %}

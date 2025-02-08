@@ -1,0 +1,4 @@
+id,dob,description
+1,2000-04-05,Bihacki umejtnik
+2,1969-06-04,Bihacki umjetnik
+3,1980-11-11,Rodom iz Ripca
